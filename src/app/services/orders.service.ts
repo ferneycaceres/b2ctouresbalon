@@ -16,8 +16,8 @@ export class OrdersService {
   constructor(private http: Http) { }
 
   getOrders(){
-     //var url = '192.168.0.2';
-    var url = 'localhost';
+    var url = '192.168.0.2';
+    //var url = 'localhost';
     var port = '8080';
     var searchUrl = 'http://'+url+':'+port+'/orders?start=0&pageSize=10';
     return this.http.get(searchUrl)
@@ -25,8 +25,8 @@ export class OrdersService {
             .do(value => console.log(value));
   }
    getOrdersbyPage(page:number){
-     //var url = '192.168.0.2';
-    var url = 'localhost';
+    var url = '192.168.0.2';
+    //var url = 'localhost';
     var port = '8080';
     var searchUrl = 'http://'+url+':'+port+'/orders?start='+page+'&pageSize=10';
     return this.http.get(searchUrl)
@@ -36,8 +36,8 @@ export class OrdersService {
 
 
   getOrderbyId(id:String) {
-    //var url = '192.168.0.2';
-    var url = 'localhost';
+    var url = '192.168.0.2';
+    //var url = 'localhost';
     var port = '8080';
     var searchUrl = 'http://'+url+':'+port+'/orders/'+id;
     return this.http.get(searchUrl)
